@@ -1,4 +1,3 @@
-// pages/index.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setData } from '../features/sampleSlice';
@@ -18,12 +17,11 @@ const Home = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1>Pantip Home Page</h1>
+        <h1>Explore the world</h1>
       </header>
       <main className="main">
         {data ? (
           <div className="content">
-            {/* Render data in Airbnb style */}
             {data.map((item, index) => (
               <div key={index} className="item">
                 <h2>{item.title}</h2>
@@ -42,7 +40,7 @@ const Home = () => {
         }
         .header {
           background: #ff5a5f;
-          padding: 10px;
+          padding: 50px;
           text-align: center;
           color: white;
         }
@@ -52,12 +50,12 @@ const Home = () => {
         .content {
           display: flex;
           flex-wrap: wrap;
+          gap: 20px;
         }
         .item {
           border: 1px solid #ddd;
-          margin: 10px;
-          padding: 10px;
-          border-radius: 4px;
+          padding: 20px;
+          border-radius: 10px;
           background: #fff;
           flex: 1 1 calc(33% - 20px);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -69,7 +67,7 @@ const Home = () => {
         }
         @media (max-width: 480px) {
           .item {
-            flex: 1 1 calc(100% - 20px);
+            flex: 1 1 100%;
           }
         }
       `}</style>
